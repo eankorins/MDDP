@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<surveyModel:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:surveyModel="platform:/resource/dk.itu.mddp.eank.project/model/SurveyModel.ecore">
+  <surveys>
+    <questions
+        xsi:type="surveyModel:Ranking">
+      <forks/>
+    </questions>
+  </surveys>
+</surveyModel:Model>
