@@ -5,12 +5,11 @@ package survey.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import survey.Question;
-import survey.Section;
 import survey.surveyPackage;
 
 /**
@@ -21,14 +20,13 @@ import survey.surveyPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link survey.impl.QuestionImpl#getQuestion <em>Question</em>}</li>
- *   <li>{@link survey.impl.QuestionImpl#isOptional <em>Optional</em>}</li>
- *   <li>{@link survey.impl.QuestionImpl#getSection <em>Section</em>}</li>
+ *   <li>{@link survey.impl.QuestionImpl#isRequired <em>Required</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public abstract class QuestionImpl extends NamedElementImpl implements Question {
+public abstract class QuestionImpl extends MinimalEObjectImpl.Container implements Question {
 	/**
 	 * The default value of the '{@link #getQuestion() <em>Question</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,34 +48,24 @@ public abstract class QuestionImpl extends NamedElementImpl implements Question 
 	protected String question = QUESTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isOptional() <em>Optional</em>}' attribute.
+	 * The default value of the '{@link #isRequired() <em>Required</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isOptional()
+	 * @see #isRequired()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean OPTIONAL_EDEFAULT = false;
+	protected static final boolean REQUIRED_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isOptional() <em>Optional</em>}' attribute.
+	 * The cached value of the '{@link #isRequired() <em>Required</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isOptional()
+	 * @see #isRequired()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean optional = OPTIONAL_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getSection() <em>Section</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSection()
-	 * @generated
-	 * @ordered
-	 */
-	protected Section section;
+	protected boolean required = REQUIRED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,8 +112,8 @@ public abstract class QuestionImpl extends NamedElementImpl implements Question 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isOptional() {
-		return optional;
+	public boolean isRequired() {
+		return required;
 	}
 
 	/**
@@ -133,49 +121,11 @@ public abstract class QuestionImpl extends NamedElementImpl implements Question 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOptional(boolean newOptional) {
-		boolean oldOptional = optional;
-		optional = newOptional;
+	public void setRequired(boolean newRequired) {
+		boolean oldRequired = required;
+		required = newRequired;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, surveyPackage.QUESTION__OPTIONAL, oldOptional, optional));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Section getSection() {
-		if (section != null && section.eIsProxy()) {
-			InternalEObject oldSection = (InternalEObject)section;
-			section = (Section)eResolveProxy(oldSection);
-			if (section != oldSection) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, surveyPackage.QUESTION__SECTION, oldSection, section));
-			}
-		}
-		return section;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Section basicGetSection() {
-		return section;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSection(Section newSection) {
-		Section oldSection = section;
-		section = newSection;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, surveyPackage.QUESTION__SECTION, oldSection, section));
+			eNotify(new ENotificationImpl(this, Notification.SET, surveyPackage.QUESTION__REQUIRED, oldRequired, required));
 	}
 
 	/**
@@ -188,11 +138,8 @@ public abstract class QuestionImpl extends NamedElementImpl implements Question 
 		switch (featureID) {
 			case surveyPackage.QUESTION__QUESTION:
 				return getQuestion();
-			case surveyPackage.QUESTION__OPTIONAL:
-				return isOptional();
-			case surveyPackage.QUESTION__SECTION:
-				if (resolve) return getSection();
-				return basicGetSection();
+			case surveyPackage.QUESTION__REQUIRED:
+				return isRequired();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -208,11 +155,8 @@ public abstract class QuestionImpl extends NamedElementImpl implements Question 
 			case surveyPackage.QUESTION__QUESTION:
 				setQuestion((String)newValue);
 				return;
-			case surveyPackage.QUESTION__OPTIONAL:
-				setOptional((Boolean)newValue);
-				return;
-			case surveyPackage.QUESTION__SECTION:
-				setSection((Section)newValue);
+			case surveyPackage.QUESTION__REQUIRED:
+				setRequired((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -229,11 +173,8 @@ public abstract class QuestionImpl extends NamedElementImpl implements Question 
 			case surveyPackage.QUESTION__QUESTION:
 				setQuestion(QUESTION_EDEFAULT);
 				return;
-			case surveyPackage.QUESTION__OPTIONAL:
-				setOptional(OPTIONAL_EDEFAULT);
-				return;
-			case surveyPackage.QUESTION__SECTION:
-				setSection((Section)null);
+			case surveyPackage.QUESTION__REQUIRED:
+				setRequired(REQUIRED_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -249,10 +190,8 @@ public abstract class QuestionImpl extends NamedElementImpl implements Question 
 		switch (featureID) {
 			case surveyPackage.QUESTION__QUESTION:
 				return QUESTION_EDEFAULT == null ? question != null : !QUESTION_EDEFAULT.equals(question);
-			case surveyPackage.QUESTION__OPTIONAL:
-				return optional != OPTIONAL_EDEFAULT;
-			case surveyPackage.QUESTION__SECTION:
-				return section != null;
+			case surveyPackage.QUESTION__REQUIRED:
+				return required != REQUIRED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -269,8 +208,8 @@ public abstract class QuestionImpl extends NamedElementImpl implements Question 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (question: ");
 		result.append(question);
-		result.append(", optional: ");
-		result.append(optional);
+		result.append(", required: ");
+		result.append(required);
 		result.append(')');
 		return result.toString();
 	}

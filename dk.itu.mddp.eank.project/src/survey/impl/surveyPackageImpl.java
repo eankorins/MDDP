@@ -13,18 +13,16 @@ import survey.Choice;
 import survey.Dichotomous;
 import survey.Model;
 import survey.MultipleChoice;
-import survey.NamedElement;
+import survey.MultipleChoiceFork;
 import survey.Open;
 import survey.Question;
 import survey.Ranking;
+import survey.RankingFork;
 import survey.Rating;
-import survey.Section;
+import survey.RatingFork;
 import survey.Staple;
 import survey.SumConstant;
 import survey.Survey;
-import survey.multiFork;
-import survey.rankingFORK;
-import survey.ratingFork;
 import survey.surveyFactory;
 import survey.surveyPackage;
 
@@ -89,20 +87,6 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass namedElementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sectionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass rankingEClass = null;
 
 	/**
@@ -131,14 +115,14 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass rankingFORKEClass = null;
+	private EClass rankingForkEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass multiForkEClass = null;
+	private EClass multipleChoiceForkEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -249,15 +233,6 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSurvey_Sections() {
-		return (EReference)surveyEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getQuestion() {
 		return questionEClass;
 	}
@@ -276,17 +251,8 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getQuestion_Optional() {
+	public EAttribute getQuestion_Required() {
 		return (EAttribute)questionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQuestion_Section() {
-		return (EReference)questionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -312,7 +278,7 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMultipleChoice_MultiFORKS() {
+	public EReference getMultipleChoice_MultipleChoiceForks() {
 		return (EReference)multipleChoiceEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -420,33 +386,6 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNamedElement() {
-		return namedElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getNamedElement_Name() {
-		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSection() {
-		return sectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getRanking() {
 		return rankingEClass;
 	}
@@ -528,8 +467,8 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getrankingFORK() {
-		return rankingFORKEClass;
+	public EClass getRankingFork() {
+		return rankingForkEClass;
 	}
 
 	/**
@@ -537,8 +476,8 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getrankingFORK_Forkedquestions() {
-		return (EReference)rankingFORKEClass.getEStructuralFeatures().get(0);
+	public EReference getRankingFork_Forkedquestions() {
+		return (EReference)rankingForkEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -546,8 +485,8 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getrankingFORK_Min() {
-		return (EAttribute)rankingFORKEClass.getEStructuralFeatures().get(1);
+	public EAttribute getRankingFork_Min() {
+		return (EAttribute)rankingForkEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -555,8 +494,8 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getrankingFORK_Max() {
-		return (EAttribute)rankingFORKEClass.getEStructuralFeatures().get(2);
+	public EAttribute getRankingFork_Max() {
+		return (EAttribute)rankingForkEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -564,8 +503,8 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getrankingFORK_Matcher() {
-		return (EReference)rankingFORKEClass.getEStructuralFeatures().get(3);
+	public EReference getRankingFork_Matcher() {
+		return (EReference)rankingForkEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -573,8 +512,8 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getmultiFork() {
-		return multiForkEClass;
+	public EClass getMultipleChoiceFork() {
+		return multipleChoiceForkEClass;
 	}
 
 	/**
@@ -582,8 +521,8 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getmultiFork_Matcher() {
-		return (EReference)multiForkEClass.getEStructuralFeatures().get(0);
+	public EReference getMultipleChoiceFork_Matcher() {
+		return (EReference)multipleChoiceForkEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -591,8 +530,8 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getmultiFork_Forkedquestions() {
-		return (EReference)multiForkEClass.getEStructuralFeatures().get(1);
+	public EReference getMultipleChoiceFork_Forkedquestions() {
+		return (EReference)multipleChoiceForkEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -600,7 +539,7 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getratingFork() {
+	public EClass getRatingFork() {
 		return ratingForkEClass;
 	}
 
@@ -609,7 +548,7 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getratingFork_Min() {
+	public EAttribute getRatingFork_Min() {
 		return (EAttribute)ratingForkEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -618,7 +557,7 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getratingFork_Max() {
+	public EAttribute getRatingFork_Max() {
 		return (EAttribute)ratingForkEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -627,7 +566,7 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getratingFork_Forkedquestion() {
+	public EReference getRatingFork_Forkedquestion() {
 		return (EReference)ratingForkEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -664,16 +603,14 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 
 		surveyEClass = createEClass(SURVEY);
 		createEReference(surveyEClass, SURVEY__QUESTIONS);
-		createEReference(surveyEClass, SURVEY__SECTIONS);
 
 		questionEClass = createEClass(QUESTION);
 		createEAttribute(questionEClass, QUESTION__QUESTION);
-		createEAttribute(questionEClass, QUESTION__OPTIONAL);
-		createEReference(questionEClass, QUESTION__SECTION);
+		createEAttribute(questionEClass, QUESTION__REQUIRED);
 
 		multipleChoiceEClass = createEClass(MULTIPLE_CHOICE);
 		createEReference(multipleChoiceEClass, MULTIPLE_CHOICE__CHOICE);
-		createEReference(multipleChoiceEClass, MULTIPLE_CHOICE__MULTI_FORKS);
+		createEReference(multipleChoiceEClass, MULTIPLE_CHOICE__MULTIPLE_CHOICE_FORKS);
 		createEAttribute(multipleChoiceEClass, MULTIPLE_CHOICE__OTHER);
 
 		openEClass = createEClass(OPEN);
@@ -689,11 +626,6 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 		choiceEClass = createEClass(CHOICE);
 		createEAttribute(choiceEClass, CHOICE__DESCRIPTION);
 
-		namedElementEClass = createEClass(NAMED_ELEMENT);
-		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
-
-		sectionEClass = createEClass(SECTION);
-
 		rankingEClass = createEClass(RANKING);
 		createEReference(rankingEClass, RANKING__FORKS);
 		createEReference(rankingEClass, RANKING__CHOICES);
@@ -707,15 +639,15 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 		stapleEClass = createEClass(STAPLE);
 		createEAttribute(stapleEClass, STAPLE__MID);
 
-		rankingFORKEClass = createEClass(RANKING_FORK);
-		createEReference(rankingFORKEClass, RANKING_FORK__FORKEDQUESTIONS);
-		createEAttribute(rankingFORKEClass, RANKING_FORK__MIN);
-		createEAttribute(rankingFORKEClass, RANKING_FORK__MAX);
-		createEReference(rankingFORKEClass, RANKING_FORK__MATCHER);
+		rankingForkEClass = createEClass(RANKING_FORK);
+		createEReference(rankingForkEClass, RANKING_FORK__FORKEDQUESTIONS);
+		createEAttribute(rankingForkEClass, RANKING_FORK__MIN);
+		createEAttribute(rankingForkEClass, RANKING_FORK__MAX);
+		createEReference(rankingForkEClass, RANKING_FORK__MATCHER);
 
-		multiForkEClass = createEClass(MULTI_FORK);
-		createEReference(multiForkEClass, MULTI_FORK__MATCHER);
-		createEReference(multiForkEClass, MULTI_FORK__FORKEDQUESTIONS);
+		multipleChoiceForkEClass = createEClass(MULTIPLE_CHOICE_FORK);
+		createEReference(multipleChoiceForkEClass, MULTIPLE_CHOICE_FORK__MATCHER);
+		createEReference(multipleChoiceForkEClass, MULTIPLE_CHOICE_FORK__FORKEDQUESTIONS);
 
 		ratingForkEClass = createEClass(RATING_FORK);
 		createEAttribute(ratingForkEClass, RATING_FORK__MIN);
@@ -751,12 +683,9 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		surveyEClass.getESuperTypes().add(this.getNamedElement());
-		questionEClass.getESuperTypes().add(this.getNamedElement());
 		multipleChoiceEClass.getESuperTypes().add(this.getQuestion());
 		openEClass.getESuperTypes().add(this.getQuestion());
 		ratingEClass.getESuperTypes().add(this.getQuestion());
-		sectionEClass.getESuperTypes().add(this.getNamedElement());
 		rankingEClass.getESuperTypes().add(this.getQuestion());
 		dichotomousEClass.getESuperTypes().add(this.getQuestion());
 		sumConstantEClass.getESuperTypes().add(this.getQuestion());
@@ -768,16 +697,14 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 
 		initEClass(surveyEClass, Survey.class, "Survey", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSurvey_Questions(), this.getQuestion(), null, "questions", null, 0, -1, Survey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSurvey_Sections(), this.getSection(), null, "sections", null, 0, -1, Survey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(questionEClass, Question.class, "Question", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQuestion_Question(), ecorePackage.getEString(), "question", null, 0, 1, Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getQuestion_Optional(), ecorePackage.getEBoolean(), "optional", null, 0, 1, Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuestion_Section(), this.getSection(), null, "section", null, 0, 1, Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestion_Required(), ecorePackage.getEBoolean(), "required", null, 0, 1, Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(multipleChoiceEClass, MultipleChoice.class, "MultipleChoice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMultipleChoice_Choice(), this.getChoice(), null, "choice", null, 0, -1, MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMultipleChoice_MultiFORKS(), this.getmultiFork(), null, "multiFORKS", null, 0, -1, MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMultipleChoice_MultipleChoiceForks(), this.getMultipleChoiceFork(), null, "MultipleChoiceForks", null, 0, -1, MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMultipleChoice_Other(), ecorePackage.getEString(), "other", null, 0, 1, MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(openEClass, Open.class, "Open", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -788,18 +715,13 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 		initEAttribute(getRating_Max(), ecorePackage.getEInt(), "Max", null, 0, 1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRating_First(), ecorePackage.getEString(), "first", null, 0, 1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRating_Last(), ecorePackage.getEString(), "last", null, 0, 1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRating_RatingForks(), this.getratingFork(), null, "ratingForks", null, 0, -1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRating_RatingForks(), this.getRatingFork(), null, "RatingForks", null, 0, -1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(choiceEClass, Choice.class, "Choice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getChoice_Description(), ecorePackage.getEString(), "Description", null, 0, 1, Choice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(sectionEClass, Section.class, "Section", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(rankingEClass, Ranking.class, "Ranking", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRanking_Forks(), this.getrankingFORK(), null, "forks", null, 0, -1, Ranking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRanking_Forks(), this.getRankingFork(), null, "forks", null, 0, -1, Ranking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRanking_Choices(), this.getChoice(), null, "choices", null, 2, -1, Ranking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dichotomousEClass, Dichotomous.class, "Dichotomous", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -811,20 +733,20 @@ public class surveyPackageImpl extends EPackageImpl implements surveyPackage {
 		initEClass(stapleEClass, Staple.class, "Staple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStaple_Mid(), ecorePackage.getEString(), "mid", null, 0, 1, Staple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(rankingFORKEClass, rankingFORK.class, "rankingFORK", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getrankingFORK_Forkedquestions(), this.getQuestion(), null, "forkedquestions", null, 0, -1, rankingFORK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getrankingFORK_Min(), ecorePackage.getEInt(), "min", null, 0, 1, rankingFORK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getrankingFORK_Max(), ecorePackage.getEInt(), "max", null, 0, 1, rankingFORK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getrankingFORK_Matcher(), this.getChoice(), null, "matcher", null, 1, 1, rankingFORK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(rankingForkEClass, RankingFork.class, "RankingFork", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRankingFork_Forkedquestions(), this.getQuestion(), null, "forkedquestions", null, 0, -1, RankingFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRankingFork_Min(), ecorePackage.getEInt(), "min", null, 0, 1, RankingFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRankingFork_Max(), ecorePackage.getEInt(), "max", null, 0, 1, RankingFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRankingFork_Matcher(), this.getChoice(), null, "matcher", null, 1, 1, RankingFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(multiForkEClass, multiFork.class, "multiFork", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getmultiFork_Matcher(), this.getChoice(), null, "matcher", null, 1, 1, multiFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getmultiFork_Forkedquestions(), this.getQuestion(), null, "forkedquestions", null, 0, -1, multiFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(multipleChoiceForkEClass, MultipleChoiceFork.class, "MultipleChoiceFork", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMultipleChoiceFork_Matcher(), this.getChoice(), null, "matcher", null, 1, 1, MultipleChoiceFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMultipleChoiceFork_Forkedquestions(), this.getQuestion(), null, "forkedquestions", null, 0, -1, MultipleChoiceFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(ratingForkEClass, ratingFork.class, "ratingFork", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getratingFork_Min(), ecorePackage.getEInt(), "min", null, 0, 1, ratingFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getratingFork_Max(), ecorePackage.getEInt(), "max", null, 0, 1, ratingFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getratingFork_Forkedquestion(), this.getQuestion(), null, "forkedquestion", null, 0, -1, ratingFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(ratingForkEClass, RatingFork.class, "RatingFork", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRatingFork_Min(), ecorePackage.getEInt(), "min", null, 0, 1, RatingFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRatingFork_Max(), ecorePackage.getEInt(), "max", null, 0, 1, RatingFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRatingFork_Forkedquestion(), this.getQuestion(), null, "forkedquestion", null, 0, -1, RatingFork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

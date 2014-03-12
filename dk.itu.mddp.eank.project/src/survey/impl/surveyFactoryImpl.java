@@ -62,14 +62,13 @@ public class surveyFactoryImpl extends EFactoryImpl implements surveyFactory {
 			case surveyPackage.OPEN: return createOpen();
 			case surveyPackage.RATING: return createRating();
 			case surveyPackage.CHOICE: return createChoice();
-			case surveyPackage.SECTION: return createSection();
 			case surveyPackage.RANKING: return createRanking();
 			case surveyPackage.DICHOTOMOUS: return createDichotomous();
 			case surveyPackage.SUM_CONSTANT: return createSumConstant();
 			case surveyPackage.STAPLE: return createStaple();
-			case surveyPackage.RANKING_FORK: return createrankingFORK();
-			case surveyPackage.MULTI_FORK: return createmultiFork();
-			case surveyPackage.RATING_FORK: return createratingFork();
+			case surveyPackage.RANKING_FORK: return createRankingFork();
+			case surveyPackage.MULTIPLE_CHOICE_FORK: return createMultipleChoiceFork();
+			case surveyPackage.RATING_FORK: return createRatingFork();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -140,16 +139,6 @@ public class surveyFactoryImpl extends EFactoryImpl implements surveyFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Section createSection() {
-		SectionImpl section = new SectionImpl();
-		return section;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Ranking createRanking() {
 		RankingImpl ranking = new RankingImpl();
 		return ranking;
@@ -190,9 +179,9 @@ public class surveyFactoryImpl extends EFactoryImpl implements surveyFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public rankingFORK createrankingFORK() {
-		rankingFORKImpl rankingFORK = new rankingFORKImpl();
-		return rankingFORK;
+	public RankingFork createRankingFork() {
+		RankingForkImpl rankingFork = new RankingForkImpl();
+		return rankingFork;
 	}
 
 	/**
@@ -200,9 +189,9 @@ public class surveyFactoryImpl extends EFactoryImpl implements surveyFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public multiFork createmultiFork() {
-		multiForkImpl multiFork = new multiForkImpl();
-		return multiFork;
+	public MultipleChoiceFork createMultipleChoiceFork() {
+		MultipleChoiceForkImpl multipleChoiceFork = new MultipleChoiceForkImpl();
+		return multipleChoiceFork;
 	}
 
 	/**
@@ -210,8 +199,8 @@ public class surveyFactoryImpl extends EFactoryImpl implements surveyFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ratingFork createratingFork() {
-		ratingForkImpl ratingFork = new ratingForkImpl();
+	public RatingFork createRatingFork() {
+		RatingForkImpl ratingFork = new RatingForkImpl();
 		return ratingFork;
 	}
 

@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link survey.MultipleChoice#getChoice <em>Choice</em>}</li>
- *   <li>{@link survey.MultipleChoice#getMultiFORKS <em>Multi FORKS</em>}</li>
+ *   <li>{@link survey.MultipleChoice#getMultipleChoiceForks <em>Multiple Choice Forks</em>}</li>
  *   <li>{@link survey.MultipleChoice#getOther <em>Other</em>}</li>
  * </ul>
  * </p>
@@ -40,20 +40,20 @@ public interface MultipleChoice extends Question {
 	EList<Choice> getChoice();
 
 	/**
-	 * Returns the value of the '<em><b>Multi FORKS</b></em>' containment reference list.
-	 * The list contents are of type {@link survey.multiFork}.
+	 * Returns the value of the '<em><b>Multiple Choice Forks</b></em>' containment reference list.
+	 * The list contents are of type {@link survey.MultipleChoiceFork}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Multi FORKS</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Multiple Choice Forks</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Multi FORKS</em>' containment reference list.
-	 * @see survey.surveyPackage#getMultipleChoice_MultiFORKS()
+	 * @return the value of the '<em>Multiple Choice Forks</em>' containment reference list.
+	 * @see survey.surveyPackage#getMultipleChoice_MultipleChoiceForks()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<multiFork> getMultiFORKS();
+	EList<MultipleChoiceFork> getMultipleChoiceForks();
 
 	/**
 	 * Returns the value of the '<em><b>Other</b></em>' attribute.

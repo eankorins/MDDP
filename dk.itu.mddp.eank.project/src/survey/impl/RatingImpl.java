@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import survey.Rating;
-import survey.ratingFork;
+import survey.RatingFork;
 import survey.surveyPackage;
 
 /**
@@ -127,7 +127,7 @@ public class RatingImpl extends QuestionImpl implements Rating {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ratingFork> ratingForks;
+	protected EList<RatingFork> ratingForks;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -237,9 +237,9 @@ public class RatingImpl extends QuestionImpl implements Rating {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ratingFork> getRatingForks() {
+	public EList<RatingFork> getRatingForks() {
 		if (ratingForks == null) {
-			ratingForks = new EObjectContainmentEList<ratingFork>(ratingFork.class, this, surveyPackage.RATING__RATING_FORKS);
+			ratingForks = new EObjectContainmentEList<RatingFork>(RatingFork.class, this, surveyPackage.RATING__RATING_FORKS);
 		}
 		return ratingForks;
 	}
@@ -303,7 +303,7 @@ public class RatingImpl extends QuestionImpl implements Rating {
 				return;
 			case surveyPackage.RATING__RATING_FORKS:
 				getRatingForks().clear();
-				getRatingForks().addAll((Collection<? extends ratingFork>)newValue);
+				getRatingForks().addAll((Collection<? extends RatingFork>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

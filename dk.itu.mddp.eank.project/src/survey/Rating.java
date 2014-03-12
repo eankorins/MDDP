@@ -131,7 +131,7 @@ public interface Rating extends Question {
 
 	/**
 	 * Returns the value of the '<em><b>Rating Forks</b></em>' containment reference list.
-	 * The list contents are of type {@link survey.ratingFork}.
+	 * The list contents are of type {@link survey.RatingFork}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Rating Forks</em>' containment reference list isn't clear,
@@ -143,6 +143,6 @@ public interface Rating extends Question {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ratingFork> getRatingForks();
+	EList<RatingFork> getRatingForks();
 
 } // Rating

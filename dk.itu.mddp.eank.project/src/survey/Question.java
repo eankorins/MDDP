@@ -2,6 +2,7 @@
  */
 package survey;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,8 +13,7 @@ package survey;
  * The following features are supported:
  * <ul>
  *   <li>{@link survey.Question#getQuestion <em>Question</em>}</li>
- *   <li>{@link survey.Question#isOptional <em>Optional</em>}</li>
- *   <li>{@link survey.Question#getSection <em>Section</em>}</li>
+ *   <li>{@link survey.Question#isRequired <em>Required</em>}</li>
  * </ul>
  * </p>
  *
@@ -21,7 +21,7 @@ package survey;
  * @model abstract="true"
  * @generated
  */
-public interface Question extends NamedElement {
+public interface Question extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Question</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -49,55 +49,29 @@ public interface Question extends NamedElement {
 	void setQuestion(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Optional</b></em>' attribute.
+	 * Returns the value of the '<em><b>Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Optional</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Required</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Optional</em>' attribute.
-	 * @see #setOptional(boolean)
-	 * @see survey.surveyPackage#getQuestion_Optional()
+	 * @return the value of the '<em>Required</em>' attribute.
+	 * @see #setRequired(boolean)
+	 * @see survey.surveyPackage#getQuestion_Required()
 	 * @model
 	 * @generated
 	 */
-	boolean isOptional();
+	boolean isRequired();
 
 	/**
-	 * Sets the value of the '{@link survey.Question#isOptional <em>Optional</em>}' attribute.
+	 * Sets the value of the '{@link survey.Question#isRequired <em>Required</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Optional</em>' attribute.
-	 * @see #isOptional()
+	 * @param value the new value of the '<em>Required</em>' attribute.
+	 * @see #isRequired()
 	 * @generated
 	 */
-	void setOptional(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Section</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Section</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Section</em>' reference.
-	 * @see #setSection(Section)
-	 * @see survey.surveyPackage#getQuestion_Section()
-	 * @model
-	 * @generated
-	 */
-	Section getSection();
-
-	/**
-	 * Sets the value of the '{@link survey.Question#getSection <em>Section</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Section</em>' reference.
-	 * @see #getSection()
-	 * @generated
-	 */
-	void setSection(Section value);
+	void setRequired(boolean value);
 
 } // Question

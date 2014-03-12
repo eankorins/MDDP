@@ -76,15 +76,6 @@ public interface surveyFactory extends EFactory {
 	Choice createChoice();
 
 	/**
-	 * Returns a new object of class '<em>Section</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Section</em>'.
-	 * @generated
-	 */
-	Section createSection();
-
-	/**
 	 * Returns a new object of class '<em>Ranking</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,31 +112,31 @@ public interface surveyFactory extends EFactory {
 	Staple createStaple();
 
 	/**
-	 * Returns a new object of class '<em>ranking FORK</em>'.
+	 * Returns a new object of class '<em>Ranking Fork</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ranking FORK</em>'.
+	 * @return a new object of class '<em>Ranking Fork</em>'.
 	 * @generated
 	 */
-	rankingFORK createrankingFORK();
+	RankingFork createRankingFork();
 
 	/**
-	 * Returns a new object of class '<em>multi Fork</em>'.
+	 * Returns a new object of class '<em>Multiple Choice Fork</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>multi Fork</em>'.
+	 * @return a new object of class '<em>Multiple Choice Fork</em>'.
 	 * @generated
 	 */
-	multiFork createmultiFork();
+	MultipleChoiceFork createMultipleChoiceFork();
 
 	/**
-	 * Returns a new object of class '<em>rating Fork</em>'.
+	 * Returns a new object of class '<em>Rating Fork</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>rating Fork</em>'.
+	 * @return a new object of class '<em>Rating Fork</em>'.
 	 * @generated
 	 */
-	ratingFork createratingFork();
+	RatingFork createRatingFork();
 
 	/**
 	 * Returns the package supported by this factory.

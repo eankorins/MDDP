@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import survey.Choice;
 import survey.Ranking;
-import survey.rankingFORK;
+import survey.RankingFork;
 import survey.surveyPackage;
 
 /**
@@ -42,7 +42,7 @@ public class RankingImpl extends QuestionImpl implements Ranking {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<rankingFORK> forks;
+	protected EList<RankingFork> forks;
 
 	/**
 	 * The cached value of the '{@link #getChoices() <em>Choices</em>}' containment reference list.
@@ -78,9 +78,9 @@ public class RankingImpl extends QuestionImpl implements Ranking {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<rankingFORK> getForks() {
+	public EList<RankingFork> getForks() {
 		if (forks == null) {
-			forks = new EObjectContainmentEList<rankingFORK>(rankingFORK.class, this, surveyPackage.RANKING__FORKS);
+			forks = new EObjectContainmentEList<RankingFork>(RankingFork.class, this, surveyPackage.RANKING__FORKS);
 		}
 		return forks;
 	}
@@ -140,7 +140,7 @@ public class RankingImpl extends QuestionImpl implements Ranking {
 		switch (featureID) {
 			case surveyPackage.RANKING__FORKS:
 				getForks().clear();
-				getForks().addAll((Collection<? extends rankingFORK>)newValue);
+				getForks().addAll((Collection<? extends RankingFork>)newValue);
 				return;
 			case surveyPackage.RANKING__CHOICES:
 				getChoices().clear();

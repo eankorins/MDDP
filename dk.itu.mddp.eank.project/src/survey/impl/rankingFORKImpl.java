@@ -20,26 +20,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import survey.Choice;
 import survey.Question;
-import survey.rankingFORK;
+import survey.RankingFork;
 import survey.surveyPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>ranking FORK</b></em>'.
+ * An implementation of the model object '<em><b>Ranking Fork</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link survey.impl.rankingFORKImpl#getForkedquestions <em>Forkedquestions</em>}</li>
- *   <li>{@link survey.impl.rankingFORKImpl#getMin <em>Min</em>}</li>
- *   <li>{@link survey.impl.rankingFORKImpl#getMax <em>Max</em>}</li>
- *   <li>{@link survey.impl.rankingFORKImpl#getMatcher <em>Matcher</em>}</li>
+ *   <li>{@link survey.impl.RankingForkImpl#getForkedquestions <em>Forkedquestions</em>}</li>
+ *   <li>{@link survey.impl.RankingForkImpl#getMin <em>Min</em>}</li>
+ *   <li>{@link survey.impl.RankingForkImpl#getMax <em>Max</em>}</li>
+ *   <li>{@link survey.impl.RankingForkImpl#getMatcher <em>Matcher</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class rankingFORKImpl extends MinimalEObjectImpl.Container implements rankingFORK {
+public class RankingForkImpl extends MinimalEObjectImpl.Container implements RankingFork {
 	/**
 	 * The cached value of the '{@link #getForkedquestions() <em>Forkedquestions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -105,7 +105,7 @@ public class rankingFORKImpl extends MinimalEObjectImpl.Container implements ran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected rankingFORKImpl() {
+	protected RankingForkImpl() {
 		super();
 	}
 
@@ -334,4 +334,4 @@ public class rankingFORKImpl extends MinimalEObjectImpl.Container implements ran
 		return result.toString();
 	}
 
-} //rankingFORKImpl
+} //RankingForkImpl

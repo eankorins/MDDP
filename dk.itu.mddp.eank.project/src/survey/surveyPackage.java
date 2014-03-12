@@ -94,43 +94,6 @@ public interface surveyPackage extends EPackage {
 	int MODEL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link survey.impl.NamedElementImpl <em>Named Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see survey.impl.NamedElementImpl
-	 * @see survey.impl.surveyPackageImpl#getNamedElement()
-	 * @generated
-	 */
-	int NAMED_ELEMENT = 7;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NAMED_ELEMENT__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Named Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NAMED_ELEMENT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Named Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NAMED_ELEMENT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link survey.impl.SurveyImpl <em>Survey</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -141,31 +104,13 @@ public interface surveyPackage extends EPackage {
 	int SURVEY = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SURVEY__NAME = NAMED_ELEMENT__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Questions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SURVEY__QUESTIONS = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Sections</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SURVEY__SECTIONS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int SURVEY__QUESTIONS = 0;
 
 	/**
 	 * The number of structural features of the '<em>Survey</em>' class.
@@ -174,7 +119,7 @@ public interface surveyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SURVEY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int SURVEY_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Survey</em>' class.
@@ -183,7 +128,7 @@ public interface surveyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SURVEY_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int SURVEY_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link survey.impl.QuestionImpl <em>Question</em>}' class.
@@ -196,40 +141,22 @@ public interface surveyPackage extends EPackage {
 	int QUESTION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__NAME = NAMED_ELEMENT__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Question</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION__QUESTION = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int QUESTION__QUESTION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * The feature id for the '<em><b>Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION__OPTIONAL = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Section</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__SECTION = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int QUESTION__REQUIRED = 1;
 
 	/**
 	 * The number of structural features of the '<em>Question</em>' class.
@@ -238,7 +165,7 @@ public interface surveyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int QUESTION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Question</em>' class.
@@ -247,7 +174,7 @@ public interface surveyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int QUESTION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link survey.impl.MultipleChoiceImpl <em>Multiple Choice</em>}' class.
@@ -260,15 +187,6 @@ public interface surveyPackage extends EPackage {
 	int MULTIPLE_CHOICE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLE_CHOICE__NAME = QUESTION__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Question</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -278,22 +196,13 @@ public interface surveyPackage extends EPackage {
 	int MULTIPLE_CHOICE__QUESTION = QUESTION__QUESTION;
 
 	/**
-	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * The feature id for the '<em><b>Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_CHOICE__OPTIONAL = QUESTION__OPTIONAL;
-
-	/**
-	 * The feature id for the '<em><b>Section</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLE_CHOICE__SECTION = QUESTION__SECTION;
+	int MULTIPLE_CHOICE__REQUIRED = QUESTION__REQUIRED;
 
 	/**
 	 * The feature id for the '<em><b>Choice</b></em>' containment reference list.
@@ -305,13 +214,13 @@ public interface surveyPackage extends EPackage {
 	int MULTIPLE_CHOICE__CHOICE = QUESTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Multi FORKS</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Multiple Choice Forks</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLE_CHOICE__MULTI_FORKS = QUESTION_FEATURE_COUNT + 1;
+	int MULTIPLE_CHOICE__MULTIPLE_CHOICE_FORKS = QUESTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Other</b></em>' attribute.
@@ -351,15 +260,6 @@ public interface surveyPackage extends EPackage {
 	int OPEN = 4;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPEN__NAME = QUESTION__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Question</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -369,22 +269,13 @@ public interface surveyPackage extends EPackage {
 	int OPEN__QUESTION = QUESTION__QUESTION;
 
 	/**
-	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * The feature id for the '<em><b>Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPEN__OPTIONAL = QUESTION__OPTIONAL;
-
-	/**
-	 * The feature id for the '<em><b>Section</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPEN__SECTION = QUESTION__SECTION;
+	int OPEN__REQUIRED = QUESTION__REQUIRED;
 
 	/**
 	 * The feature id for the '<em><b>Answer Length</b></em>' attribute.
@@ -424,15 +315,6 @@ public interface surveyPackage extends EPackage {
 	int RATING = 5;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RATING__NAME = QUESTION__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Question</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -442,22 +324,13 @@ public interface surveyPackage extends EPackage {
 	int RATING__QUESTION = QUESTION__QUESTION;
 
 	/**
-	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * The feature id for the '<em><b>Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RATING__OPTIONAL = QUESTION__OPTIONAL;
-
-	/**
-	 * The feature id for the '<em><b>Section</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RATING__SECTION = QUESTION__SECTION;
+	int RATING__REQUIRED = QUESTION__REQUIRED;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' attribute.
@@ -560,43 +433,6 @@ public interface surveyPackage extends EPackage {
 	int CHOICE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link survey.impl.SectionImpl <em>Section</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see survey.impl.SectionImpl
-	 * @see survey.impl.surveyPackageImpl#getSection()
-	 * @generated
-	 */
-	int SECTION = 8;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECTION__NAME = NAMED_ELEMENT__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Section</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECTION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Section</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECTION_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link survey.impl.RankingImpl <em>Ranking</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -604,16 +440,7 @@ public interface surveyPackage extends EPackage {
 	 * @see survey.impl.surveyPackageImpl#getRanking()
 	 * @generated
 	 */
-	int RANKING = 9;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RANKING__NAME = QUESTION__NAME;
+	int RANKING = 7;
 
 	/**
 	 * The feature id for the '<em><b>Question</b></em>' attribute.
@@ -625,22 +452,13 @@ public interface surveyPackage extends EPackage {
 	int RANKING__QUESTION = QUESTION__QUESTION;
 
 	/**
-	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * The feature id for the '<em><b>Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RANKING__OPTIONAL = QUESTION__OPTIONAL;
-
-	/**
-	 * The feature id for the '<em><b>Section</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RANKING__SECTION = QUESTION__SECTION;
+	int RANKING__REQUIRED = QUESTION__REQUIRED;
 
 	/**
 	 * The feature id for the '<em><b>Forks</b></em>' containment reference list.
@@ -686,16 +504,7 @@ public interface surveyPackage extends EPackage {
 	 * @see survey.impl.surveyPackageImpl#getDichotomous()
 	 * @generated
 	 */
-	int DICHOTOMOUS = 10;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DICHOTOMOUS__NAME = QUESTION__NAME;
+	int DICHOTOMOUS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Question</b></em>' attribute.
@@ -707,22 +516,13 @@ public interface surveyPackage extends EPackage {
 	int DICHOTOMOUS__QUESTION = QUESTION__QUESTION;
 
 	/**
-	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * The feature id for the '<em><b>Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DICHOTOMOUS__OPTIONAL = QUESTION__OPTIONAL;
-
-	/**
-	 * The feature id for the '<em><b>Section</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DICHOTOMOUS__SECTION = QUESTION__SECTION;
+	int DICHOTOMOUS__REQUIRED = QUESTION__REQUIRED;
 
 	/**
 	 * The feature id for the '<em><b>Yes</b></em>' containment reference list.
@@ -768,16 +568,7 @@ public interface surveyPackage extends EPackage {
 	 * @see survey.impl.surveyPackageImpl#getSumConstant()
 	 * @generated
 	 */
-	int SUM_CONSTANT = 11;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUM_CONSTANT__NAME = QUESTION__NAME;
+	int SUM_CONSTANT = 9;
 
 	/**
 	 * The feature id for the '<em><b>Question</b></em>' attribute.
@@ -789,22 +580,13 @@ public interface surveyPackage extends EPackage {
 	int SUM_CONSTANT__QUESTION = QUESTION__QUESTION;
 
 	/**
-	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * The feature id for the '<em><b>Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUM_CONSTANT__OPTIONAL = QUESTION__OPTIONAL;
-
-	/**
-	 * The feature id for the '<em><b>Section</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUM_CONSTANT__SECTION = QUESTION__SECTION;
+	int SUM_CONSTANT__REQUIRED = QUESTION__REQUIRED;
 
 	/**
 	 * The number of structural features of the '<em>Sum Constant</em>' class.
@@ -832,16 +614,7 @@ public interface surveyPackage extends EPackage {
 	 * @see survey.impl.surveyPackageImpl#getStaple()
 	 * @generated
 	 */
-	int STAPLE = 12;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAPLE__NAME = RATING__NAME;
+	int STAPLE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Question</b></em>' attribute.
@@ -853,22 +626,13 @@ public interface surveyPackage extends EPackage {
 	int STAPLE__QUESTION = RATING__QUESTION;
 
 	/**
-	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * The feature id for the '<em><b>Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAPLE__OPTIONAL = RATING__OPTIONAL;
-
-	/**
-	 * The feature id for the '<em><b>Section</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAPLE__SECTION = RATING__SECTION;
+	int STAPLE__REQUIRED = RATING__REQUIRED;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' attribute.
@@ -943,14 +707,14 @@ public interface surveyPackage extends EPackage {
 	int STAPLE_OPERATION_COUNT = RATING_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link survey.impl.rankingFORKImpl <em>ranking FORK</em>}' class.
+	 * The meta object id for the '{@link survey.impl.RankingForkImpl <em>Ranking Fork</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see survey.impl.rankingFORKImpl
-	 * @see survey.impl.surveyPackageImpl#getrankingFORK()
+	 * @see survey.impl.RankingForkImpl
+	 * @see survey.impl.surveyPackageImpl#getRankingFork()
 	 * @generated
 	 */
-	int RANKING_FORK = 13;
+	int RANKING_FORK = 11;
 
 	/**
 	 * The feature id for the '<em><b>Forkedquestions</b></em>' containment reference list.
@@ -989,7 +753,7 @@ public interface surveyPackage extends EPackage {
 	int RANKING_FORK__MATCHER = 3;
 
 	/**
-	 * The number of structural features of the '<em>ranking FORK</em>' class.
+	 * The number of structural features of the '<em>Ranking Fork</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -998,7 +762,7 @@ public interface surveyPackage extends EPackage {
 	int RANKING_FORK_FEATURE_COUNT = 4;
 
 	/**
-	 * The number of operations of the '<em>ranking FORK</em>' class.
+	 * The number of operations of the '<em>Ranking Fork</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1007,14 +771,14 @@ public interface surveyPackage extends EPackage {
 	int RANKING_FORK_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link survey.impl.multiForkImpl <em>multi Fork</em>}' class.
+	 * The meta object id for the '{@link survey.impl.MultipleChoiceForkImpl <em>Multiple Choice Fork</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see survey.impl.multiForkImpl
-	 * @see survey.impl.surveyPackageImpl#getmultiFork()
+	 * @see survey.impl.MultipleChoiceForkImpl
+	 * @see survey.impl.surveyPackageImpl#getMultipleChoiceFork()
 	 * @generated
 	 */
-	int MULTI_FORK = 14;
+	int MULTIPLE_CHOICE_FORK = 12;
 
 	/**
 	 * The feature id for the '<em><b>Matcher</b></em>' reference.
@@ -1023,7 +787,7 @@ public interface surveyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTI_FORK__MATCHER = 0;
+	int MULTIPLE_CHOICE_FORK__MATCHER = 0;
 
 	/**
 	 * The feature id for the '<em><b>Forkedquestions</b></em>' containment reference list.
@@ -1032,35 +796,35 @@ public interface surveyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTI_FORK__FORKEDQUESTIONS = 1;
+	int MULTIPLE_CHOICE_FORK__FORKEDQUESTIONS = 1;
 
 	/**
-	 * The number of structural features of the '<em>multi Fork</em>' class.
+	 * The number of structural features of the '<em>Multiple Choice Fork</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTI_FORK_FEATURE_COUNT = 2;
+	int MULTIPLE_CHOICE_FORK_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>multi Fork</em>' class.
+	 * The number of operations of the '<em>Multiple Choice Fork</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTI_FORK_OPERATION_COUNT = 0;
+	int MULTIPLE_CHOICE_FORK_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link survey.impl.ratingForkImpl <em>rating Fork</em>}' class.
+	 * The meta object id for the '{@link survey.impl.RatingForkImpl <em>Rating Fork</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see survey.impl.ratingForkImpl
-	 * @see survey.impl.surveyPackageImpl#getratingFork()
+	 * @see survey.impl.RatingForkImpl
+	 * @see survey.impl.surveyPackageImpl#getRatingFork()
 	 * @generated
 	 */
-	int RATING_FORK = 15;
+	int RATING_FORK = 13;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' attribute.
@@ -1090,7 +854,7 @@ public interface surveyPackage extends EPackage {
 	int RATING_FORK__FORKEDQUESTION = 2;
 
 	/**
-	 * The number of structural features of the '<em>rating Fork</em>' class.
+	 * The number of structural features of the '<em>Rating Fork</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1099,7 +863,7 @@ public interface surveyPackage extends EPackage {
 	int RATING_FORK_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>rating Fork</em>' class.
+	 * The number of operations of the '<em>Rating Fork</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1151,17 +915,6 @@ public interface surveyPackage extends EPackage {
 	EReference getSurvey_Questions();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link survey.Survey#getSections <em>Sections</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sections</em>'.
-	 * @see survey.Survey#getSections()
-	 * @see #getSurvey()
-	 * @generated
-	 */
-	EReference getSurvey_Sections();
-
-	/**
 	 * Returns the meta object for class '{@link survey.Question <em>Question</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1183,26 +936,15 @@ public interface surveyPackage extends EPackage {
 	EAttribute getQuestion_Question();
 
 	/**
-	 * Returns the meta object for the attribute '{@link survey.Question#isOptional <em>Optional</em>}'.
+	 * Returns the meta object for the attribute '{@link survey.Question#isRequired <em>Required</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Optional</em>'.
-	 * @see survey.Question#isOptional()
+	 * @return the meta object for the attribute '<em>Required</em>'.
+	 * @see survey.Question#isRequired()
 	 * @see #getQuestion()
 	 * @generated
 	 */
-	EAttribute getQuestion_Optional();
-
-	/**
-	 * Returns the meta object for the reference '{@link survey.Question#getSection <em>Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Section</em>'.
-	 * @see survey.Question#getSection()
-	 * @see #getQuestion()
-	 * @generated
-	 */
-	EReference getQuestion_Section();
+	EAttribute getQuestion_Required();
 
 	/**
 	 * Returns the meta object for class '{@link survey.MultipleChoice <em>Multiple Choice</em>}'.
@@ -1226,15 +968,15 @@ public interface surveyPackage extends EPackage {
 	EReference getMultipleChoice_Choice();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link survey.MultipleChoice#getMultiFORKS <em>Multi FORKS</em>}'.
+	 * Returns the meta object for the containment reference list '{@link survey.MultipleChoice#getMultipleChoiceForks <em>Multiple Choice Forks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Multi FORKS</em>'.
-	 * @see survey.MultipleChoice#getMultiFORKS()
+	 * @return the meta object for the containment reference list '<em>Multiple Choice Forks</em>'.
+	 * @see survey.MultipleChoice#getMultipleChoiceForks()
 	 * @see #getMultipleChoice()
 	 * @generated
 	 */
-	EReference getMultipleChoice_MultiFORKS();
+	EReference getMultipleChoice_MultipleChoiceForks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link survey.MultipleChoice#getOther <em>Other</em>}'.
@@ -1355,37 +1097,6 @@ public interface surveyPackage extends EPackage {
 	EAttribute getChoice_Description();
 
 	/**
-	 * Returns the meta object for class '{@link survey.NamedElement <em>Named Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Named Element</em>'.
-	 * @see survey.NamedElement
-	 * @generated
-	 */
-	EClass getNamedElement();
-
-	/**
-	 * Returns the meta object for the attribute '{@link survey.NamedElement#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see survey.NamedElement#getName()
-	 * @see #getNamedElement()
-	 * @generated
-	 */
-	EAttribute getNamedElement_Name();
-
-	/**
-	 * Returns the meta object for class '{@link survey.Section <em>Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Section</em>'.
-	 * @see survey.Section
-	 * @generated
-	 */
-	EClass getSection();
-
-	/**
 	 * Returns the meta object for class '{@link survey.Ranking <em>Ranking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1481,133 +1192,133 @@ public interface surveyPackage extends EPackage {
 	EAttribute getStaple_Mid();
 
 	/**
-	 * Returns the meta object for class '{@link survey.rankingFORK <em>ranking FORK</em>}'.
+	 * Returns the meta object for class '{@link survey.RankingFork <em>Ranking Fork</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>ranking FORK</em>'.
-	 * @see survey.rankingFORK
+	 * @return the meta object for class '<em>Ranking Fork</em>'.
+	 * @see survey.RankingFork
 	 * @generated
 	 */
-	EClass getrankingFORK();
+	EClass getRankingFork();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link survey.rankingFORK#getForkedquestions <em>Forkedquestions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Forkedquestions</em>'.
-	 * @see survey.rankingFORK#getForkedquestions()
-	 * @see #getrankingFORK()
-	 * @generated
-	 */
-	EReference getrankingFORK_Forkedquestions();
-
-	/**
-	 * Returns the meta object for the attribute '{@link survey.rankingFORK#getMin <em>Min</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Min</em>'.
-	 * @see survey.rankingFORK#getMin()
-	 * @see #getrankingFORK()
-	 * @generated
-	 */
-	EAttribute getrankingFORK_Min();
-
-	/**
-	 * Returns the meta object for the attribute '{@link survey.rankingFORK#getMax <em>Max</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Max</em>'.
-	 * @see survey.rankingFORK#getMax()
-	 * @see #getrankingFORK()
-	 * @generated
-	 */
-	EAttribute getrankingFORK_Max();
-
-	/**
-	 * Returns the meta object for the reference '{@link survey.rankingFORK#getMatcher <em>Matcher</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Matcher</em>'.
-	 * @see survey.rankingFORK#getMatcher()
-	 * @see #getrankingFORK()
-	 * @generated
-	 */
-	EReference getrankingFORK_Matcher();
-
-	/**
-	 * Returns the meta object for class '{@link survey.multiFork <em>multi Fork</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>multi Fork</em>'.
-	 * @see survey.multiFork
-	 * @generated
-	 */
-	EClass getmultiFork();
-
-	/**
-	 * Returns the meta object for the reference '{@link survey.multiFork#getMatcher <em>Matcher</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Matcher</em>'.
-	 * @see survey.multiFork#getMatcher()
-	 * @see #getmultiFork()
-	 * @generated
-	 */
-	EReference getmultiFork_Matcher();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link survey.multiFork#getForkedquestions <em>Forkedquestions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link survey.RankingFork#getForkedquestions <em>Forkedquestions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Forkedquestions</em>'.
-	 * @see survey.multiFork#getForkedquestions()
-	 * @see #getmultiFork()
+	 * @see survey.RankingFork#getForkedquestions()
+	 * @see #getRankingFork()
 	 * @generated
 	 */
-	EReference getmultiFork_Forkedquestions();
+	EReference getRankingFork_Forkedquestions();
 
 	/**
-	 * Returns the meta object for class '{@link survey.ratingFork <em>rating Fork</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>rating Fork</em>'.
-	 * @see survey.ratingFork
-	 * @generated
-	 */
-	EClass getratingFork();
-
-	/**
-	 * Returns the meta object for the attribute '{@link survey.ratingFork#getMin <em>Min</em>}'.
+	 * Returns the meta object for the attribute '{@link survey.RankingFork#getMin <em>Min</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Min</em>'.
-	 * @see survey.ratingFork#getMin()
-	 * @see #getratingFork()
+	 * @see survey.RankingFork#getMin()
+	 * @see #getRankingFork()
 	 * @generated
 	 */
-	EAttribute getratingFork_Min();
+	EAttribute getRankingFork_Min();
 
 	/**
-	 * Returns the meta object for the attribute '{@link survey.ratingFork#getMax <em>Max</em>}'.
+	 * Returns the meta object for the attribute '{@link survey.RankingFork#getMax <em>Max</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Max</em>'.
-	 * @see survey.ratingFork#getMax()
-	 * @see #getratingFork()
+	 * @see survey.RankingFork#getMax()
+	 * @see #getRankingFork()
 	 * @generated
 	 */
-	EAttribute getratingFork_Max();
+	EAttribute getRankingFork_Max();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link survey.ratingFork#getForkedquestion <em>Forkedquestion</em>}'.
+	 * Returns the meta object for the reference '{@link survey.RankingFork#getMatcher <em>Matcher</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Matcher</em>'.
+	 * @see survey.RankingFork#getMatcher()
+	 * @see #getRankingFork()
+	 * @generated
+	 */
+	EReference getRankingFork_Matcher();
+
+	/**
+	 * Returns the meta object for class '{@link survey.MultipleChoiceFork <em>Multiple Choice Fork</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Multiple Choice Fork</em>'.
+	 * @see survey.MultipleChoiceFork
+	 * @generated
+	 */
+	EClass getMultipleChoiceFork();
+
+	/**
+	 * Returns the meta object for the reference '{@link survey.MultipleChoiceFork#getMatcher <em>Matcher</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Matcher</em>'.
+	 * @see survey.MultipleChoiceFork#getMatcher()
+	 * @see #getMultipleChoiceFork()
+	 * @generated
+	 */
+	EReference getMultipleChoiceFork_Matcher();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link survey.MultipleChoiceFork#getForkedquestions <em>Forkedquestions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Forkedquestions</em>'.
+	 * @see survey.MultipleChoiceFork#getForkedquestions()
+	 * @see #getMultipleChoiceFork()
+	 * @generated
+	 */
+	EReference getMultipleChoiceFork_Forkedquestions();
+
+	/**
+	 * Returns the meta object for class '{@link survey.RatingFork <em>Rating Fork</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rating Fork</em>'.
+	 * @see survey.RatingFork
+	 * @generated
+	 */
+	EClass getRatingFork();
+
+	/**
+	 * Returns the meta object for the attribute '{@link survey.RatingFork#getMin <em>Min</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Min</em>'.
+	 * @see survey.RatingFork#getMin()
+	 * @see #getRatingFork()
+	 * @generated
+	 */
+	EAttribute getRatingFork_Min();
+
+	/**
+	 * Returns the meta object for the attribute '{@link survey.RatingFork#getMax <em>Max</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Max</em>'.
+	 * @see survey.RatingFork#getMax()
+	 * @see #getRatingFork()
+	 * @generated
+	 */
+	EAttribute getRatingFork_Max();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link survey.RatingFork#getForkedquestion <em>Forkedquestion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Forkedquestion</em>'.
-	 * @see survey.ratingFork#getForkedquestion()
-	 * @see #getratingFork()
+	 * @see survey.RatingFork#getForkedquestion()
+	 * @see #getRatingFork()
 	 * @generated
 	 */
-	EReference getratingFork_Forkedquestion();
+	EReference getRatingFork_Forkedquestion();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1669,14 +1380,6 @@ public interface surveyPackage extends EPackage {
 		EReference SURVEY__QUESTIONS = eINSTANCE.getSurvey_Questions();
 
 		/**
-		 * The meta object literal for the '<em><b>Sections</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SURVEY__SECTIONS = eINSTANCE.getSurvey_Sections();
-
-		/**
 		 * The meta object literal for the '{@link survey.impl.QuestionImpl <em>Question</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1695,20 +1398,12 @@ public interface surveyPackage extends EPackage {
 		EAttribute QUESTION__QUESTION = eINSTANCE.getQuestion_Question();
 
 		/**
-		 * The meta object literal for the '<em><b>Optional</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Required</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute QUESTION__OPTIONAL = eINSTANCE.getQuestion_Optional();
-
-		/**
-		 * The meta object literal for the '<em><b>Section</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUESTION__SECTION = eINSTANCE.getQuestion_Section();
+		EAttribute QUESTION__REQUIRED = eINSTANCE.getQuestion_Required();
 
 		/**
 		 * The meta object literal for the '{@link survey.impl.MultipleChoiceImpl <em>Multiple Choice</em>}' class.
@@ -1729,12 +1424,12 @@ public interface surveyPackage extends EPackage {
 		EReference MULTIPLE_CHOICE__CHOICE = eINSTANCE.getMultipleChoice_Choice();
 
 		/**
-		 * The meta object literal for the '<em><b>Multi FORKS</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Multiple Choice Forks</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MULTIPLE_CHOICE__MULTI_FORKS = eINSTANCE.getMultipleChoice_MultiFORKS();
+		EReference MULTIPLE_CHOICE__MULTIPLE_CHOICE_FORKS = eINSTANCE.getMultipleChoice_MultipleChoiceForks();
 
 		/**
 		 * The meta object literal for the '<em><b>Other</b></em>' attribute feature.
@@ -1831,34 +1526,6 @@ public interface surveyPackage extends EPackage {
 		EAttribute CHOICE__DESCRIPTION = eINSTANCE.getChoice_Description();
 
 		/**
-		 * The meta object literal for the '{@link survey.impl.NamedElementImpl <em>Named Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see survey.impl.NamedElementImpl
-		 * @see survey.impl.surveyPackageImpl#getNamedElement()
-		 * @generated
-		 */
-		EClass NAMED_ELEMENT = eINSTANCE.getNamedElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
-
-		/**
-		 * The meta object literal for the '{@link survey.impl.SectionImpl <em>Section</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see survey.impl.SectionImpl
-		 * @see survey.impl.surveyPackageImpl#getSection()
-		 * @generated
-		 */
-		EClass SECTION = eINSTANCE.getSection();
-
-		/**
 		 * The meta object literal for the '{@link survey.impl.RankingImpl <em>Ranking</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1939,14 +1606,14 @@ public interface surveyPackage extends EPackage {
 		EAttribute STAPLE__MID = eINSTANCE.getStaple_Mid();
 
 		/**
-		 * The meta object literal for the '{@link survey.impl.rankingFORKImpl <em>ranking FORK</em>}' class.
+		 * The meta object literal for the '{@link survey.impl.RankingForkImpl <em>Ranking Fork</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see survey.impl.rankingFORKImpl
-		 * @see survey.impl.surveyPackageImpl#getrankingFORK()
+		 * @see survey.impl.RankingForkImpl
+		 * @see survey.impl.surveyPackageImpl#getRankingFork()
 		 * @generated
 		 */
-		EClass RANKING_FORK = eINSTANCE.getrankingFORK();
+		EClass RANKING_FORK = eINSTANCE.getRankingFork();
 
 		/**
 		 * The meta object literal for the '<em><b>Forkedquestions</b></em>' containment reference list feature.
@@ -1954,7 +1621,7 @@ public interface surveyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RANKING_FORK__FORKEDQUESTIONS = eINSTANCE.getrankingFORK_Forkedquestions();
+		EReference RANKING_FORK__FORKEDQUESTIONS = eINSTANCE.getRankingFork_Forkedquestions();
 
 		/**
 		 * The meta object literal for the '<em><b>Min</b></em>' attribute feature.
@@ -1962,7 +1629,7 @@ public interface surveyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RANKING_FORK__MIN = eINSTANCE.getrankingFORK_Min();
+		EAttribute RANKING_FORK__MIN = eINSTANCE.getRankingFork_Min();
 
 		/**
 		 * The meta object literal for the '<em><b>Max</b></em>' attribute feature.
@@ -1970,7 +1637,7 @@ public interface surveyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RANKING_FORK__MAX = eINSTANCE.getrankingFORK_Max();
+		EAttribute RANKING_FORK__MAX = eINSTANCE.getRankingFork_Max();
 
 		/**
 		 * The meta object literal for the '<em><b>Matcher</b></em>' reference feature.
@@ -1978,17 +1645,17 @@ public interface surveyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RANKING_FORK__MATCHER = eINSTANCE.getrankingFORK_Matcher();
+		EReference RANKING_FORK__MATCHER = eINSTANCE.getRankingFork_Matcher();
 
 		/**
-		 * The meta object literal for the '{@link survey.impl.multiForkImpl <em>multi Fork</em>}' class.
+		 * The meta object literal for the '{@link survey.impl.MultipleChoiceForkImpl <em>Multiple Choice Fork</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see survey.impl.multiForkImpl
-		 * @see survey.impl.surveyPackageImpl#getmultiFork()
+		 * @see survey.impl.MultipleChoiceForkImpl
+		 * @see survey.impl.surveyPackageImpl#getMultipleChoiceFork()
 		 * @generated
 		 */
-		EClass MULTI_FORK = eINSTANCE.getmultiFork();
+		EClass MULTIPLE_CHOICE_FORK = eINSTANCE.getMultipleChoiceFork();
 
 		/**
 		 * The meta object literal for the '<em><b>Matcher</b></em>' reference feature.
@@ -1996,7 +1663,7 @@ public interface surveyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MULTI_FORK__MATCHER = eINSTANCE.getmultiFork_Matcher();
+		EReference MULTIPLE_CHOICE_FORK__MATCHER = eINSTANCE.getMultipleChoiceFork_Matcher();
 
 		/**
 		 * The meta object literal for the '<em><b>Forkedquestions</b></em>' containment reference list feature.
@@ -2004,17 +1671,17 @@ public interface surveyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MULTI_FORK__FORKEDQUESTIONS = eINSTANCE.getmultiFork_Forkedquestions();
+		EReference MULTIPLE_CHOICE_FORK__FORKEDQUESTIONS = eINSTANCE.getMultipleChoiceFork_Forkedquestions();
 
 		/**
-		 * The meta object literal for the '{@link survey.impl.ratingForkImpl <em>rating Fork</em>}' class.
+		 * The meta object literal for the '{@link survey.impl.RatingForkImpl <em>Rating Fork</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see survey.impl.ratingForkImpl
-		 * @see survey.impl.surveyPackageImpl#getratingFork()
+		 * @see survey.impl.RatingForkImpl
+		 * @see survey.impl.surveyPackageImpl#getRatingFork()
 		 * @generated
 		 */
-		EClass RATING_FORK = eINSTANCE.getratingFork();
+		EClass RATING_FORK = eINSTANCE.getRatingFork();
 
 		/**
 		 * The meta object literal for the '<em><b>Min</b></em>' attribute feature.
@@ -2022,7 +1689,7 @@ public interface surveyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RATING_FORK__MIN = eINSTANCE.getratingFork_Min();
+		EAttribute RATING_FORK__MIN = eINSTANCE.getRatingFork_Min();
 
 		/**
 		 * The meta object literal for the '<em><b>Max</b></em>' attribute feature.
@@ -2030,7 +1697,7 @@ public interface surveyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RATING_FORK__MAX = eINSTANCE.getratingFork_Max();
+		EAttribute RATING_FORK__MAX = eINSTANCE.getRatingFork_Max();
 
 		/**
 		 * The meta object literal for the '<em><b>Forkedquestion</b></em>' containment reference list feature.
@@ -2038,7 +1705,7 @@ public interface surveyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RATING_FORK__FORKEDQUESTION = eINSTANCE.getratingFork_Forkedquestion();
+		EReference RATING_FORK__FORKEDQUESTION = eINSTANCE.getRatingFork_Forkedquestion();
 
 	}
 

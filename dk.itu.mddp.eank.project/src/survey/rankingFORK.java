@@ -8,24 +8,24 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>ranking FORK</b></em>'.
+ * A representation of the model object '<em><b>Ranking Fork</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link survey.rankingFORK#getForkedquestions <em>Forkedquestions</em>}</li>
- *   <li>{@link survey.rankingFORK#getMin <em>Min</em>}</li>
- *   <li>{@link survey.rankingFORK#getMax <em>Max</em>}</li>
- *   <li>{@link survey.rankingFORK#getMatcher <em>Matcher</em>}</li>
+ *   <li>{@link survey.RankingFork#getForkedquestions <em>Forkedquestions</em>}</li>
+ *   <li>{@link survey.RankingFork#getMin <em>Min</em>}</li>
+ *   <li>{@link survey.RankingFork#getMax <em>Max</em>}</li>
+ *   <li>{@link survey.RankingFork#getMatcher <em>Matcher</em>}</li>
  * </ul>
  * </p>
  *
- * @see survey.surveyPackage#getrankingFORK()
+ * @see survey.surveyPackage#getRankingFork()
  * @model
  * @generated
  */
-public interface rankingFORK extends EObject {
+public interface RankingFork extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Forkedquestions</b></em>' containment reference list.
 	 * The list contents are of type {@link survey.Question}.
@@ -36,7 +36,7 @@ public interface rankingFORK extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Forkedquestions</em>' containment reference list.
-	 * @see survey.surveyPackage#getrankingFORK_Forkedquestions()
+	 * @see survey.surveyPackage#getRankingFork_Forkedquestions()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -52,14 +52,14 @@ public interface rankingFORK extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min</em>' attribute.
 	 * @see #setMin(int)
-	 * @see survey.surveyPackage#getrankingFORK_Min()
+	 * @see survey.surveyPackage#getRankingFork_Min()
 	 * @model
 	 * @generated
 	 */
 	int getMin();
 
 	/**
-	 * Sets the value of the '{@link survey.rankingFORK#getMin <em>Min</em>}' attribute.
+	 * Sets the value of the '{@link survey.RankingFork#getMin <em>Min</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Min</em>' attribute.
@@ -78,14 +78,14 @@ public interface rankingFORK extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max</em>' attribute.
 	 * @see #setMax(int)
-	 * @see survey.surveyPackage#getrankingFORK_Max()
+	 * @see survey.surveyPackage#getRankingFork_Max()
 	 * @model
 	 * @generated
 	 */
 	int getMax();
 
 	/**
-	 * Sets the value of the '{@link survey.rankingFORK#getMax <em>Max</em>}' attribute.
+	 * Sets the value of the '{@link survey.RankingFork#getMax <em>Max</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Max</em>' attribute.
@@ -104,14 +104,14 @@ public interface rankingFORK extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Matcher</em>' reference.
 	 * @see #setMatcher(Choice)
-	 * @see survey.surveyPackage#getrankingFORK_Matcher()
+	 * @see survey.surveyPackage#getRankingFork_Matcher()
 	 * @model required="true"
 	 * @generated
 	 */
 	Choice getMatcher();
 
 	/**
-	 * Sets the value of the '{@link survey.rankingFORK#getMatcher <em>Matcher</em>}' reference.
+	 * Sets the value of the '{@link survey.RankingFork#getMatcher <em>Matcher</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Matcher</em>' reference.
@@ -120,4 +120,4 @@ public interface rankingFORK extends EObject {
 	 */
 	void setMatcher(Choice value);
 
-} // rankingFORK
+} // RankingFork

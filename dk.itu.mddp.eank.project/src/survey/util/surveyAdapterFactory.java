@@ -96,14 +96,6 @@ public class surveyAdapterFactory extends AdapterFactoryImpl {
 				return createChoiceAdapter();
 			}
 			@Override
-			public Adapter caseNamedElement(NamedElement object) {
-				return createNamedElementAdapter();
-			}
-			@Override
-			public Adapter caseSection(Section object) {
-				return createSectionAdapter();
-			}
-			@Override
 			public Adapter caseRanking(Ranking object) {
 				return createRankingAdapter();
 			}
@@ -120,16 +112,16 @@ public class surveyAdapterFactory extends AdapterFactoryImpl {
 				return createStapleAdapter();
 			}
 			@Override
-			public Adapter caserankingFORK(rankingFORK object) {
-				return createrankingFORKAdapter();
+			public Adapter caseRankingFork(RankingFork object) {
+				return createRankingForkAdapter();
 			}
 			@Override
-			public Adapter casemultiFork(multiFork object) {
-				return createmultiForkAdapter();
+			public Adapter caseMultipleChoiceFork(MultipleChoiceFork object) {
+				return createMultipleChoiceForkAdapter();
 			}
 			@Override
-			public Adapter caseratingFork(ratingFork object) {
-				return createratingForkAdapter();
+			public Adapter caseRatingFork(RatingFork object) {
+				return createRatingForkAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -250,34 +242,6 @@ public class surveyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link survey.NamedElement <em>Named Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see survey.NamedElement
-	 * @generated
-	 */
-	public Adapter createNamedElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link survey.Section <em>Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see survey.Section
-	 * @generated
-	 */
-	public Adapter createSectionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link survey.Ranking <em>Ranking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -334,44 +298,44 @@ public class surveyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link survey.rankingFORK <em>ranking FORK</em>}'.
+	 * Creates a new adapter for an object of class '{@link survey.RankingFork <em>Ranking Fork</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see survey.rankingFORK
+	 * @see survey.RankingFork
 	 * @generated
 	 */
-	public Adapter createrankingFORKAdapter() {
+	public Adapter createRankingForkAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link survey.multiFork <em>multi Fork</em>}'.
+	 * Creates a new adapter for an object of class '{@link survey.MultipleChoiceFork <em>Multiple Choice Fork</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see survey.multiFork
+	 * @see survey.MultipleChoiceFork
 	 * @generated
 	 */
-	public Adapter createmultiForkAdapter() {
+	public Adapter createMultipleChoiceForkAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link survey.ratingFork <em>rating Fork</em>}'.
+	 * Creates a new adapter for an object of class '{@link survey.RatingFork <em>Rating Fork</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see survey.ratingFork
+	 * @see survey.RatingFork
 	 * @generated
 	 */
-	public Adapter createratingForkAdapter() {
+	public Adapter createRatingForkAdapter() {
 		return null;
 	}
 

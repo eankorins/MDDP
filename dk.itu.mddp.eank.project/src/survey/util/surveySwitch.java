@@ -75,14 +75,12 @@ public class surveySwitch<T> extends Switch<T> {
 			case surveyPackage.SURVEY: {
 				Survey survey = (Survey)theEObject;
 				T result = caseSurvey(survey);
-				if (result == null) result = caseNamedElement(survey);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case surveyPackage.QUESTION: {
 				Question question = (Question)theEObject;
 				T result = caseQuestion(question);
-				if (result == null) result = caseNamedElement(question);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -90,7 +88,6 @@ public class surveySwitch<T> extends Switch<T> {
 				MultipleChoice multipleChoice = (MultipleChoice)theEObject;
 				T result = caseMultipleChoice(multipleChoice);
 				if (result == null) result = caseQuestion(multipleChoice);
-				if (result == null) result = caseNamedElement(multipleChoice);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -98,7 +95,6 @@ public class surveySwitch<T> extends Switch<T> {
 				Open open = (Open)theEObject;
 				T result = caseOpen(open);
 				if (result == null) result = caseQuestion(open);
-				if (result == null) result = caseNamedElement(open);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -106,7 +102,6 @@ public class surveySwitch<T> extends Switch<T> {
 				Rating rating = (Rating)theEObject;
 				T result = caseRating(rating);
 				if (result == null) result = caseQuestion(rating);
-				if (result == null) result = caseNamedElement(rating);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -116,24 +111,10 @@ public class surveySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case surveyPackage.NAMED_ELEMENT: {
-				NamedElement namedElement = (NamedElement)theEObject;
-				T result = caseNamedElement(namedElement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case surveyPackage.SECTION: {
-				Section section = (Section)theEObject;
-				T result = caseSection(section);
-				if (result == null) result = caseNamedElement(section);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case surveyPackage.RANKING: {
 				Ranking ranking = (Ranking)theEObject;
 				T result = caseRanking(ranking);
 				if (result == null) result = caseQuestion(ranking);
-				if (result == null) result = caseNamedElement(ranking);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -141,7 +122,6 @@ public class surveySwitch<T> extends Switch<T> {
 				Dichotomous dichotomous = (Dichotomous)theEObject;
 				T result = caseDichotomous(dichotomous);
 				if (result == null) result = caseQuestion(dichotomous);
-				if (result == null) result = caseNamedElement(dichotomous);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -149,7 +129,6 @@ public class surveySwitch<T> extends Switch<T> {
 				SumConstant sumConstant = (SumConstant)theEObject;
 				T result = caseSumConstant(sumConstant);
 				if (result == null) result = caseQuestion(sumConstant);
-				if (result == null) result = caseNamedElement(sumConstant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -158,25 +137,24 @@ public class surveySwitch<T> extends Switch<T> {
 				T result = caseStaple(staple);
 				if (result == null) result = caseRating(staple);
 				if (result == null) result = caseQuestion(staple);
-				if (result == null) result = caseNamedElement(staple);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case surveyPackage.RANKING_FORK: {
-				rankingFORK rankingFORK = (rankingFORK)theEObject;
-				T result = caserankingFORK(rankingFORK);
+				RankingFork rankingFork = (RankingFork)theEObject;
+				T result = caseRankingFork(rankingFork);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case surveyPackage.MULTI_FORK: {
-				multiFork multiFork = (multiFork)theEObject;
-				T result = casemultiFork(multiFork);
+			case surveyPackage.MULTIPLE_CHOICE_FORK: {
+				MultipleChoiceFork multipleChoiceFork = (MultipleChoiceFork)theEObject;
+				T result = caseMultipleChoiceFork(multipleChoiceFork);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case surveyPackage.RATING_FORK: {
-				ratingFork ratingFork = (ratingFork)theEObject;
-				T result = caseratingFork(ratingFork);
+				RatingFork ratingFork = (RatingFork)theEObject;
+				T result = caseRatingFork(ratingFork);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -290,36 +268,6 @@ public class surveySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNamedElement(NamedElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Section</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Section</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSection(Section object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Ranking</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -380,47 +328,47 @@ public class surveySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ranking FORK</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Ranking Fork</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ranking FORK</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Ranking Fork</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caserankingFORK(rankingFORK object) {
+	public T caseRankingFork(RankingFork object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>multi Fork</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Multiple Choice Fork</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>multi Fork</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Multiple Choice Fork</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casemultiFork(multiFork object) {
+	public T caseMultipleChoiceFork(MultipleChoiceFork object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>rating Fork</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Rating Fork</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>rating Fork</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Rating Fork</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseratingFork(ratingFork object) {
+	public T caseRatingFork(RatingFork object) {
 		return null;
 	}
 

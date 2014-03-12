@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
 public interface Ranking extends Question {
 	/**
 	 * Returns the value of the '<em><b>Forks</b></em>' containment reference list.
-	 * The list contents are of type {@link survey.rankingFORK}.
+	 * The list contents are of type {@link survey.RankingFork}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Forks</em>' containment reference list isn't clear,
@@ -36,7 +36,7 @@ public interface Ranking extends Question {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<rankingFORK> getForks();
+	EList<RankingFork> getForks();
 
 	/**
 	 * Returns the value of the '<em><b>Choices</b></em>' containment reference list.

@@ -19,25 +19,25 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import survey.Question;
-import survey.ratingFork;
+import survey.RatingFork;
 import survey.surveyPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>rating Fork</b></em>'.
+ * An implementation of the model object '<em><b>Rating Fork</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link survey.impl.ratingForkImpl#getMin <em>Min</em>}</li>
- *   <li>{@link survey.impl.ratingForkImpl#getMax <em>Max</em>}</li>
- *   <li>{@link survey.impl.ratingForkImpl#getForkedquestion <em>Forkedquestion</em>}</li>
+ *   <li>{@link survey.impl.RatingForkImpl#getMin <em>Min</em>}</li>
+ *   <li>{@link survey.impl.RatingForkImpl#getMax <em>Max</em>}</li>
+ *   <li>{@link survey.impl.RatingForkImpl#getForkedquestion <em>Forkedquestion</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ratingForkImpl extends MinimalEObjectImpl.Container implements ratingFork {
+public class RatingForkImpl extends MinimalEObjectImpl.Container implements RatingFork {
 	/**
 	 * The default value of the '{@link #getMin() <em>Min</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -93,7 +93,7 @@ public class ratingForkImpl extends MinimalEObjectImpl.Container implements rati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ratingForkImpl() {
+	protected RatingForkImpl() {
 		super();
 	}
 
@@ -273,4 +273,4 @@ public class ratingForkImpl extends MinimalEObjectImpl.Container implements rati
 		return result.toString();
 	}
 
-} //ratingForkImpl
+} //RatingForkImpl

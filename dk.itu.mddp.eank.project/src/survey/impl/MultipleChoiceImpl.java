@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import survey.Choice;
 import survey.MultipleChoice;
-import survey.multiFork;
+import survey.MultipleChoiceFork;
 import survey.surveyPackage;
 
 /**
@@ -30,7 +30,7 @@ import survey.surveyPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link survey.impl.MultipleChoiceImpl#getChoice <em>Choice</em>}</li>
- *   <li>{@link survey.impl.MultipleChoiceImpl#getMultiFORKS <em>Multi FORKS</em>}</li>
+ *   <li>{@link survey.impl.MultipleChoiceImpl#getMultipleChoiceForks <em>Multiple Choice Forks</em>}</li>
  *   <li>{@link survey.impl.MultipleChoiceImpl#getOther <em>Other</em>}</li>
  * </ul>
  * </p>
@@ -49,14 +49,14 @@ public class MultipleChoiceImpl extends QuestionImpl implements MultipleChoice {
 	protected EList<Choice> choice;
 
 	/**
-	 * The cached value of the '{@link #getMultiFORKS() <em>Multi FORKS</em>}' containment reference list.
+	 * The cached value of the '{@link #getMultipleChoiceForks() <em>Multiple Choice Forks</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMultiFORKS()
+	 * @see #getMultipleChoiceForks()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<multiFork> multiFORKS;
+	protected EList<MultipleChoiceFork> multipleChoiceForks;
 
 	/**
 	 * The default value of the '{@link #getOther() <em>Other</em>}' attribute.
@@ -114,11 +114,11 @@ public class MultipleChoiceImpl extends QuestionImpl implements MultipleChoice {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<multiFork> getMultiFORKS() {
-		if (multiFORKS == null) {
-			multiFORKS = new EObjectContainmentEList<multiFork>(multiFork.class, this, surveyPackage.MULTIPLE_CHOICE__MULTI_FORKS);
+	public EList<MultipleChoiceFork> getMultipleChoiceForks() {
+		if (multipleChoiceForks == null) {
+			multipleChoiceForks = new EObjectContainmentEList<MultipleChoiceFork>(MultipleChoiceFork.class, this, surveyPackage.MULTIPLE_CHOICE__MULTIPLE_CHOICE_FORKS);
 		}
-		return multiFORKS;
+		return multipleChoiceForks;
 	}
 
 	/**
@@ -152,8 +152,8 @@ public class MultipleChoiceImpl extends QuestionImpl implements MultipleChoice {
 		switch (featureID) {
 			case surveyPackage.MULTIPLE_CHOICE__CHOICE:
 				return ((InternalEList<?>)getChoice()).basicRemove(otherEnd, msgs);
-			case surveyPackage.MULTIPLE_CHOICE__MULTI_FORKS:
-				return ((InternalEList<?>)getMultiFORKS()).basicRemove(otherEnd, msgs);
+			case surveyPackage.MULTIPLE_CHOICE__MULTIPLE_CHOICE_FORKS:
+				return ((InternalEList<?>)getMultipleChoiceForks()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -168,8 +168,8 @@ public class MultipleChoiceImpl extends QuestionImpl implements MultipleChoice {
 		switch (featureID) {
 			case surveyPackage.MULTIPLE_CHOICE__CHOICE:
 				return getChoice();
-			case surveyPackage.MULTIPLE_CHOICE__MULTI_FORKS:
-				return getMultiFORKS();
+			case surveyPackage.MULTIPLE_CHOICE__MULTIPLE_CHOICE_FORKS:
+				return getMultipleChoiceForks();
 			case surveyPackage.MULTIPLE_CHOICE__OTHER:
 				return getOther();
 		}
@@ -189,9 +189,9 @@ public class MultipleChoiceImpl extends QuestionImpl implements MultipleChoice {
 				getChoice().clear();
 				getChoice().addAll((Collection<? extends Choice>)newValue);
 				return;
-			case surveyPackage.MULTIPLE_CHOICE__MULTI_FORKS:
-				getMultiFORKS().clear();
-				getMultiFORKS().addAll((Collection<? extends multiFork>)newValue);
+			case surveyPackage.MULTIPLE_CHOICE__MULTIPLE_CHOICE_FORKS:
+				getMultipleChoiceForks().clear();
+				getMultipleChoiceForks().addAll((Collection<? extends MultipleChoiceFork>)newValue);
 				return;
 			case surveyPackage.MULTIPLE_CHOICE__OTHER:
 				setOther((String)newValue);
@@ -211,8 +211,8 @@ public class MultipleChoiceImpl extends QuestionImpl implements MultipleChoice {
 			case surveyPackage.MULTIPLE_CHOICE__CHOICE:
 				getChoice().clear();
 				return;
-			case surveyPackage.MULTIPLE_CHOICE__MULTI_FORKS:
-				getMultiFORKS().clear();
+			case surveyPackage.MULTIPLE_CHOICE__MULTIPLE_CHOICE_FORKS:
+				getMultipleChoiceForks().clear();
 				return;
 			case surveyPackage.MULTIPLE_CHOICE__OTHER:
 				setOther(OTHER_EDEFAULT);
@@ -231,8 +231,8 @@ public class MultipleChoiceImpl extends QuestionImpl implements MultipleChoice {
 		switch (featureID) {
 			case surveyPackage.MULTIPLE_CHOICE__CHOICE:
 				return choice != null && !choice.isEmpty();
-			case surveyPackage.MULTIPLE_CHOICE__MULTI_FORKS:
-				return multiFORKS != null && !multiFORKS.isEmpty();
+			case surveyPackage.MULTIPLE_CHOICE__MULTIPLE_CHOICE_FORKS:
+				return multipleChoiceForks != null && !multipleChoiceForks.isEmpty();
 			case surveyPackage.MULTIPLE_CHOICE__OTHER:
 				return OTHER_EDEFAULT == null ? other != null : !OTHER_EDEFAULT.equals(other);
 		}
